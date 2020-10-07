@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-dark bg-dark"> <!--Header area. Header <> needed to properly align text. Also had to remove navbar elements to properly align-->
+            <h1>Weather Dashboard</h1>
+        </nav>
+    </header>
+    <div class="container-fluid">   <!--I had to create 1 row with 2 columns. I then divided the second column into 2 rows that stretched their entire length.-->
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>Search for a City</h4> <!--This row will contain the search function as well as storing the areas of previous searches-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search for City..." aria-label="City-Search" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                    </div>
+                  </div>
+                  <div class="card">  <!--The card in bootstrap for list groups best matches what we're looking for to store the searches.-->
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">City</li>
+                      <li class="list-group-item">City</li>
+                      <li class="list-group-item">City</li>
+                    </ul>
+                  </div> 
+            </div>
+            <div class="col-lg-8"> <!--This area will be used to display the current city the user searches.-->
+                <div class="row">
+                    <div class="col-lg-12">Current City:</div>
+                </div>
+                <div class="row"> <!--This section will store the 5 day forecast area. -->
+                    <div class="col-lg-12">5-Day Forecast:</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
