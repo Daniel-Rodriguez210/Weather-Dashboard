@@ -7,13 +7,17 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
     console.log(response);
-  });
+ 
+
+  $(".city").html("<h5>" + response.name + " </h5>");
+  $(".humidity").text("Humidity: " + response.main.humidity);
+  $(".wind").text("Wind Speed: " + response.wind.speed);
+  
+  var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+  $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
 
 
-
-
-
-
+});
 
 
 
