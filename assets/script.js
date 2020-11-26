@@ -1,11 +1,32 @@
 var APIKey = "18238285e369b81b9e4f2b8e21537555";
 
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + "q=San Antonio,Texasi&appid=" + APIKey;
 
+
+
+
+var cityName = $("#input").val();
+
+$("#input").keypress(function(event) { 
+	
+	if (event.keyCode === 13) { 
+        event.preventDefault();
+        console.log("#input")
+		$("#searchButton").click(); 
+	} 
+});
 
 
 $(document).ready(function() {
-$.ajax({
+
+    $("#searchButton").on("click", function() { 
+
+    cityName = $("#input").val();    
+        
+    $("#input").val("");
+    
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+        
+  $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
@@ -69,16 +90,10 @@ $.ajax({
 });
 
 });
-
+});
 });
 
 
 
-var cities = [""];
 
-$("#searchButton").on("click", function(event) {
-    event.preventDefault();
-    var cities = $("#searchHistory").val().trim();
-    cities.push(cities);
-});
 
