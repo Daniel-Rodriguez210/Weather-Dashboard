@@ -28,6 +28,16 @@ $.ajax({
     console.log(response);
     $(".uvindex").text("UV Index: " + response[0].value);
 });
+var cityName = response.name;
+var fiveDay = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=18238285e369b81b9e4f2b8e21537555";
+
+$.ajax({
+    url: fiveDay,
+    method: "GET"
+}).then(function(response) {
+    console.log(response)
+    $(".fiveday").html("Five Day: " + response)
+});
 
 });
 
