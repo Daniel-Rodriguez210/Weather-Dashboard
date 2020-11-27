@@ -28,22 +28,17 @@
                 <!--This row will contain the search function as well as storing the areas of previous searches-->
 
                 <div class="input-group mb-3">
-                    <input id="input" type="text" class="form-control" placeholder="City,State" aria-label="City-Search"
-                        aria-describedby="button-addon2">
-                    <div class="input-group-append">
+                    <input id="input" type="text" class="form-control" placeholder="City,State" class="input-group-append">
+                    <div>
                         <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
                     </div>
                 </div>
-
-
-                <div class="card">
-                    <!--The card in bootstrap for list groups best matches what we're looking for to store the searches.-->
-                    <ul class="list-group list-group-flush">
-                        <li id="searchHistory" class="list-group-item">City</li>
-                        <li class="list-group-item">City</li>
-                        <li class="list-group-item">City</li>
+                    <br>
+                <div class="card"> 
+                    <ul class="list-group list-group-flush list">
                     </ul>
                 </div>
+                
             </div>
 
 
@@ -67,31 +62,31 @@
                     <!--This section will store the 5 day forecast area. -->
                     <h4>5-Day Forecast:</h4>
                     <div class="col-md-12 fiveday">
-                        <div class="card future1 col-sm-2">
+                        <div id="days" class="card future1 col-sm-2">
                             <div class="date1"></div>
                             <div class="tempF1"></div>
                             <div class="humid1"></div>
                         </div>
                         <br>
-                        <div class=" card future2 col-sm-2"">
+                        <div id="days" class=" card future2 col-sm-2"">
                             <div class="date2"></div>
                             <div class="tempF2"></div>
                             <div class="humid2"></div>
                         </div>
                         <br>
-                        <div class="card future3 col-sm-2"">
+                        <div id="days" class="card future3 col-sm-2"">
                             <div class="date3"></div>
                             <div class="tempF3"></div>
                             <div class="humid3"></div>
                         </div>
                         <br>
-                        <div class="card future4 col-sm-2"">
+                        <div id="days" class="card future4 col-sm-2"">
                             <div class="date4"></div>
                             <div class="tempF4"></div>
                             <div class="humid4"></div>
                         </div>
                         <br>
-                        <div class="card future5 col-sm-2"">
+                        <div id="days" class="card future5 col-sm-2"">
                             <div class="date5"></div>
                             <div class="tempF5"></div>
                             <div class="humid5"></div>

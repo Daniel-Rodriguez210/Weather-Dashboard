@@ -1,16 +1,10 @@
 var APIKey = "18238285e369b81b9e4f2b8e21537555";
-
-
-
-
-
 var cityName = $("#input").val();
 
 $("#input").keypress(function(event) { 
 	
 	if (event.keyCode === 13) { 
         event.preventDefault();
-        console.log("#input")
 		$("#searchButton").click(); 
 	} 
 });
@@ -32,6 +26,7 @@ $(document).ready(function() {
   }).then(function(response) {
     console.log(response);
  
+  storeCity()  
 
   $(".city").html("<h4>" + response.name + " </h4>");
   $(".humidity").text("Humidity: " + response.main.humidity + " %");
@@ -94,6 +89,11 @@ $.ajax({
 });
 
 
-
+function storeCity() {
+    
+    let listItem = $("<li>").addClass("list-group-item").text(cityName);
+    $(".list").append(listItem);
+    
+  }
 
 
