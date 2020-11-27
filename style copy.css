@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.fiveday {
+    display: inline-flex;
+}
+
+#days {
+    background-color: blue;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
